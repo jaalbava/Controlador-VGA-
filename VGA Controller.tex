@@ -1,0 +1,43 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} %Correccion a español
+\usepackage{graphicx}
+\usepackage[left=1.3cm,right=1.3cm,top=1.8cm,bottom=4cm]{geometry}
+\usepackage{lastpage}
+\usepackage{marginnote} %utilizado para los margenes
+\usepackage{wallpaper}
+\usepackage{fancyhdr}
+
+\setlength{\headheight}{87pt} 
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt} 
+\setlength{\parindent}{0cm}
+\newcommand{\tab}{\hspace*{2em}}
+\newcommand\BackgroundStructure{
+\setlength{\unitlength}{1mm}
+\setlength\fboxsep{0mm}
+\setlength\fboxrule{0.5mm}
+\put(10, 10){\fcolorbox{black}{white!10}{\framebox(195,247){}}}
+\put(10, 262){\fcolorbox{black}{white!10}{\framebox(195, 30){}}}
+}
+%-------------------------ENCABEZADO---------------
+\fancyhead[L]{\begin{tabular}{l r | l r}	
+\textbf{Proyecto} & 1 & \textbf{P\'agina} & \thepage/\pageref{LastPage} \\
+\textbf{Trabajo} & Desarrollo de un Controlador VGA & \textbf{Actualizado en:} & 26/08/2016 \\
+\textbf{} &   & \textbf{Revisado en:} & 26/08/2016 \\
+\textbf{Grupo} & 2 & \textbf{Dise\~nadores} & Javier A. Barboza Valverde \\
+\textbf{Revisado por:} & Alfonso Chac\'on Rodr\'iguez & \textbf{ } & Mauricio R. Becerra Soto\\
+\textbf{} &   & \textbf{ } & Gustavo Rodríguez Gutierrez \\
+\end{tabular}}
+
+
+\begin{document}
+\AddToShipoutPicture{\BackgroundStructure} %Me pone el marco en los lados
+
+\section{Resumen} 
+Este proyecto se centra la visualización de objetos (imágenes, texto, gráficos ,vídeo, etc.) a través de un monitor con tecnología CRT (tubos de rayos catódicos),  tecnología más clásica y antigua de todas, se compone de un conjunto de múltiples señales que son dirigidas mediante un controlador, que es llamado Adaptador Gráfico de Vídeo (VGA, por sus siglas en ingles). El controlador genera todas las señales con el apropiado intervalo de tiempo.\\[2ex]
+El objetivo principal del proyecto consiste en una investigación previa que describe el funcionamiento del controlador VGA  y posteriormente se realiza un diseño de los bloques internos del circuito lógico para luego realizar la simulación, síntesis e implementación de un prototipo de sistema digital usando una placa FPGA Nexys 2 mediante el la utilización del lenguaje de descripción de hardware (HDL) Verilog. \\[2ex]
+En el presente trabajo se describe la composición completa en el proceso de diseño del circuito lógico utilizado para el controlador VGA, que produce señales de sincronización horizontal y vertical, así como señales de vídeo RGB. El diseño despliega tres letras en el centro de la pantalla, estas letras cambian de color mediante tres switches en representación de los colores rojo, verde y azul que un usuario controla a través de la FPGA.
+\section{Introducción} 
+
+\end{document}
